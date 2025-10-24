@@ -1,4 +1,4 @@
-# Structure
+# Структура репозиторія
 
 1. [Вступ](https://github.com/iamvladshevchuk/singularitarians/blob/main/1_INTRODUCTION.md)
 2. [Огляд продукту](https://github.com/iamvladshevchuk/singularitarians/blob/main/2_PRODUCT_OVERVIEW.md)
