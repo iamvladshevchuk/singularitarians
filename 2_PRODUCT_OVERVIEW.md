@@ -27,7 +27,7 @@
 
 ## 2.4 Характеристики користувачів
 
-Прочитайте про користувачів в категорії [Персони](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md) цього документу.
+Прочитайте про користувачів в категорії "[Персони](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md)" цього документу.
 
 ## 2.5 Припущення та залежності
 
