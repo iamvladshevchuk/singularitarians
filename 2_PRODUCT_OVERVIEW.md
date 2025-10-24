@@ -1,58 +1,51 @@
-## 2. Product Overview
-💬 _Provides background and context influencing the product’s requirements._
+# 2. Огляд продукту
 
-### 2.1 Product Perspective
-💬 _Places the product within a larger ecosystem or lineage._
+Український книжковий ринок демонструє ознаки відновлення та зростання, особливо в сегменті електронної комерції, що робить запуск цифрового сервісу перспективним.
 
-➥ Describe context and origin of the product, whether this is a new product, replacement, or member of a family. If part of a larger system, briefly explain relationships, external interfaces, and key dependencies. Include details on ownership, service level agreements (SLAs), and support models.
+## 2.1 Позиціонування продукту
 
-💡 Tips:
-- Highlight upstream/downstream systems and ownership boundaries.
-- A high-level context diagram may help to orient the reader.
+"Плай" — це новий, самостійний онлайн-сервіс, орієнтований на український ринок. Він створюється як новий продукт, а не заміна існуючої системи, і є частиною ширшої екосистеми електронної комерції.
 
-### 2.2 Product Functions
-💬 _High-level summary of what the product enables users or systems to do._
+Продукт складається з трьох основних компонентів: клієнтський UI, бекенд-API та інтерфейс адміністрування.
 
-➥ Provide a concise overview of the major functional areas/features. Defer detailed behaviors, data, and edge cases to Section 3.
+Система матиме ключові залежності від зовнішніх сервісів, з якими вона інтегрується через API, але не розробляє їх з нуля (як зазначено в Розділі 1.2):
 
-💡 Tips:
-- 5–10 bullets are often sufficient at this level, grouping related functions logically.
-- Include a top-level data flow or use case diagram if helpful.
+1. Платіжні шлюзи: (наприклад, LiqPay, Stripe, WayForPay) для обробки онлайн-платежів.
 
-### 2.3 Product Constraints
-💬 _Defines limitations or conditions shaping design and implementation._
+2. Логістичні оператори: (наприклад, Нова Пошта, Укрпошта) для розрахунку вартості, оформлення та відстеження доставки друкованих книг.
 
-➥ Describe constraints such as mandated interfaces, technology stacks, regulatory obligations, QoS baselines, hardware limitations, AI/ML model families, and organizational policies.
+## 2.2 Функціональні вимоги до продукту
 
-💡 Tips:
-- State constraints as verifiable "must" statements (e.g., “must use FIPS 140–3 validated crypto modules”).
-- Distinguish external/internal and mandatory/preferred constraints.
-- Avoid design decisions unless truly binding.
+Прочитайте про функції продукту в [функціональних вимогах](https://github.com/iamvladshevchuk/singularitarians/blob/main/4_FUNCTIONAL_REQUIREMENTS.md) цього документу.
 
-📝 Note:
-Requirements (Section 3) defines verifiable system obligations—specific behaviors or qualities the system shall exhibit in order to satisfy limits described in this section.
+## 2.3 Обмеження продукту
 
-### 2.4 User Characteristics
-💬 _Defines the user groups and the attributes that affect requirements._
+* Система повинна використовувати сторонні, сертифіковані платіжні шлюзи для всіх фінансових транзакцій. Розробка власного платіжного сервісу з нуля виключена.
+* Система не повинна займатися фізичною логістикою (складування, пакування, відправка). Її відповідальність обмежується генерацією замовлення та обміном даними з логістичним партнером.
+* Система повинна відповідати вимогам Закону України "Про захист персональних даних" при обробці та зберіганні інформації користувачів.
+* Бекенд-API повинен бути розроблений з урахуванням можливості підключення майбутніх клієнтських застосунків (наприклад, мобільних додатків).
 
-➥ Identify user classes, roles, and personas, noting expertise, access levels, frequency of use, accessibility needs, and goals.
+## 2.4 Характеристики користувачів
 
-💡 Tips:
-- Define user classes by behavior, not just titles.
-- Note localization and accessibility considerations that affect UI/UX requirements.
+Прочитайте про користувачів в категорії [Персони](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md) цього документу.
 
-### 2.5 Assumptions and Dependencies
-💬 _External assumed factors or conditions, as opposed to known facts, that the project relies on._
+## 2.5 Припущення та залежності
 
-➥ List assumptions about environment, hardware, usage patterns, third-party components/services, and organizational support. List dependencies on external systems, libraries, or teams. For each, indicate potential impact if proven false.
+Припущення:
 
-💡 Tips:
-- Link assumptions to risk register with owner and mitigation when available.
+* Припускається, що користувачі мають стабільний доступ до Інтернету та використовують сучасні веб-браузери.
+* Припускається, що видавці та постачальники надаватимуть метадані та файли книг у форматах, придатних для імпорту в систему.
 
-### 2.6 Apportioning of Requirements
-💬 _Allocation of requirements across components or increments._
+Залежності:
 
-➥ Map major requirements to subsystems, services, or releases/iterations. Use a cross-reference table to show allocation and to clearly identify deferred requirements.
+* Критична залежність від стабільності та доступності API сторонніх платіжних систем. Збій у їхній роботі безпосередньо блокує основну функцію продукту (оплату).
+* Критична залежність від API логістичних операторів. Збій унеможливить розрахунок вартості доставки та оформлення відправлень.
+* Залежність від своєчасного оновлення каталогів від видавництв для підтримки актуальності пропозицій.
 
-💡 Tips:
-- Note unknown allocations explicitly and track as follow-ups.
+## 2.6 Розподіл вимог серед компонентів
+
+Вимоги, описані в цьому SRS, будуть розподілені між трьома основними компонентами, визначеними в Розділі 1.2:
+
+* Клієнтський UI (Веб): Реалізує всі функціональні вимоги, пов'язані з взаємодією кінцевого користувача (пошук, кошик, особистий кабінет, UI платіжної форми).
+* Бекенд (API): Реалізує всю бізнес-логіку, керування даними, безпеку та інтеграцію з зовнішніми сервісами (платежі, логістика).
+* Система адміністрування: Реалізує вимоги до керування каталогом, замовленнями та користувачами.

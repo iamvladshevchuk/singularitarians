@@ -1,51 +1,44 @@
-## 1. Introduction
-💬 _Provides an overview of the entire document and orients the reader to the system being specified._
+# 1. Вступ
 
-➥ Briefly summarize the SRS’s purpose, product scope, intended audience, and how the document is organized. Do not include details here; reference the relevant sections instead.
+"Плай" — онлайн-сервіс для купівлі електронних чи паперових книг. Документ окреслює мету, межі продукту, аудиторію та функціональні й нефункціональні вимоги.
 
-### 1.1 Document Purpose
-💬 _Clarifies why this SRS exists, what it contains, and who should use it._
+### 1.1 Мета документа
 
-➥ State the purpose of the SRS in 2–4 sentences. Name the primary audiences (e.g., product, engineering, QA, security, compliance, operations) and how they use it across the software lifecycle.
+Мета документа — зафіксувати вимоги до сервісу "Плай" для узгодженого планування, розробки, тестування та приймання. Документ використовують:
 
-💡 Tips:
-- Emphasize that the SRS defines what the system must do, not how it will do it.
-- Mention related documents (vision/scope, architecture, roadmap, contracts) if relevant.
+* Продуктові менеджери — для пріоритизації задач;
+* Розробники — для проєктування та реалізації продукту;
+* Тестувальники — для побудови тестів;
 
-### 1.2 Product Scope
-💬 _Defines the software product’s purpose, boundaries, and relationship to business goals._
+### 1.2 Межі продукту
 
-➥ Identify the product by name and version/release. In 3–5 sentences, describe its primary purpose, key capabilities, and intended outcomes. Clearly list inclusions and exclusions when this SRS covers part of a larger system. Focus on the “what” and “why.”
+"Плай" — онлайн-сервіс для купівлі друкованих і електронних книг. Основні можливості: каталог і пошук, кошик і оформлення замовлення, оплата, доставка/електронна видача, облікові записи користувачів. Очікуваний результат — зручна й безпечна покупка книг. Сервіс включає в себе: клієнтський UI, бекенд-API, адміністрування каталогу. І не включає в себе: логістику як фізична операція, розробку платіжних сервісів з нуля.
 
-💡 Tips:
-- Connect capabilities to business objectives and reference a separate vision/scope document if relevant.
-- Include a simple diagram if it clarifies boundaries within a larger system.
+### 1.3 Визначення, акроніми та абревіатури
 
-### 1.3 Definitions, Acronyms, and Abbreviations
-➥ Help readers understand specialized terms and notation by providing a glossary of domain terms, acronyms, and abbreviations used in the SRS.
+| Термін | Визначення                                                                                                                   |
+|--------|------------------------------------------------------------------------------------------------------------------------------|
+| SRS    | Software Requirements Specification - документ, що описує призначення та вимоги до ПЗ                                        |
+| UI     | User Interface — візуальна частина застосунку для взаємодії з користувачем                                                   |
 
-💡 Tips:
-- Include terms that impact interpretation of requirements (e.g., “user,” “tenant,” “near real-time”).
-- Keep entries alphabetized and consistent across the document set.
+### 1.4 Зовнішні посилання
 
-| Term | Definition                                                                                                                   |
-|------|------------------------------------------------------------------------------------------------------------------------------|
-| API  | Application Programming Interface - A set of definitions and protocols for building and integrating application software     |
-| SRS  | Software Requirements Specification - A document that describes the intended purpose, requirements, and nature of a software |
-| UI   | User Interface - The visual part of computer application through which a user interacts with a software                      |
+Посилання на зовнішні нормативні чи інформативні документи відсутні.
 
-### 1.4 References
-💬 _Lists external sources that are normative or informative for this SRS._
+### 1.5 Огляд документа
 
-➥ Cite standards, contracts, policies, interface specs, UX style guides, use-case docs, architectural decisions, or a vision/scope document. For each reference, include title, author/owner, version, date, and location/URL. Indicate whether each reference is normative (binding) or informative (guidance).
+1. [Вступ](https://github.com/iamvladshevchuk/singularitarians/blob/main/1_INTRODUCTION.md) — призначення SRS, короткий опис, терміни й правила навігації.
 
-💡 Tips:
-- Prefer stable links or repository paths over volatile URLs.
+2. [Огляд продукту](https://github.com/iamvladshevchuk/singularitarians/blob/main/2_PRODUCT_OVERVIEW.md) — цілі «Плай», бізнес-контекст, межі та основні сценарії використання.
 
-### 1.5 Document Overview
-💬 _Brief guide to the structure of the SRS so readers can quickly find what they need._
+3. [Архітектура](https://github.com/iamvladshevchuk/singularitarians/blob/main/3_HIGH_LEVEL_ARCHITECTURE.md) — контекст, компоненти, інтеграції та межі відповідальності системи.
 
-➥ Summarize what each major section covers (Product Overview, Requirements, Verification, Appendixes), note any document conventions, and mention how updates and revision history are managed.
+4. [Функціональні вимоги](https://github.com/iamvladshevchuk/singularitarians/blob/main/4_FUNCTIONAL_REQUIREMENTS.md).
 
-💡 Tips:
-- Keep to 3–5 sentences focusing on navigation and conventions.
+5. [Нефункціональні вимоги](https://github.com/iamvladshevchuk/singularitarians/blob/main/5_NON_FUNCTIONAL_REQUIREMENTS.md) — вимоги до швидкості, безпеки, надійності.
+
+6. [Персони](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md) — ключові персони продукту.
+
+7. [Diagram-As-A-Code](https://github.com/iamvladshevchuk/singularitarians/blob/main/7_DIAGRAM_AS_A_CODE.md).
+
+8. [Concurrency Flows](https://github.com/iamvladshevchuk/singularitarians/blob/main/8_CONCURRENCY_FLOWS.md).
