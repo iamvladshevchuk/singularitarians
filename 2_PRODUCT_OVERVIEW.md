@@ -54,32 +54,4 @@
 
 Для основних [Персон](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md) вказуємо такі основні сценарії використання:
 
-### Сценарії Клієнта:
-
-```mermaid
-graph LR
-    A[/"Клієнт"/]
-    B[/"Адміністратор"/]
-    EXT_LOG[("API логістичного оператора")]
-    EXT_PAY[("Платіжний шлюз")]
-
-    subgraph SYS[Система «Плай»]
-        UC01([Пошук та перегляд книги])
-        UC02([Оформлення замовлення (Checkout)])
-        UC03([Перегляд особистого кабінету])
-        UC04([Керування каталогом])
-        UC05([Обробка замовлень])
-    end
-
-    A --- UC01
-    A --- UC02
-    A --- UC03
-
-    B --- UC04
-    B --- UC05
-
-    EXT_LOG --- UC02
-    EXT_PAY --- UC02
-    EXT_LOG --- UC05
-
-```
+![Use Case Diagram](//www.plantuml.com/plantuml/png/PPA_Ji9G5CRt-nGdJ32Gy0TsJ9-1pQKf5HfBcxINoPYKuk1WWeDXOD0uknI5Y9JMX2SuvuqyzqADsF7h_RxV-SwzxONI3EHax0hNlf8WVGYSuKZ2m0biIpg-9uHfIJ-02YunfGKzOKPn1SmG3DUnFVbx_8XhtDC2CpPDAQO84uenfqYRBmPZXraAQdf3r-R0AswL4JUunmGER_Y2AIRuTKWhS2C09g5jcI4xgtsZtcZMBZrsv7HFCzm1vnB0RznGn80FhZR7DU0ECzootEgXVQFHB85Q2lHCTweQJquvdd7fEU0d9lmXn_S_7wl6oBQk_Oci5SHMYTZMrVvNoMdAhDLfoPmFSjKlmPMw97R7D2kOxHApevXBnQGP5qgAZWnGgsDw9EA-G7HAYAvUbCT5kWSdIolIGn7lYbiXZYyAzRg-kNFPEfTj8VIJdcJdJ7L5p_O6_5Fz0000)
