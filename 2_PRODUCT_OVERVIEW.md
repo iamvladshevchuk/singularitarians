@@ -56,8 +56,6 @@
 
 ### Сценарії Клієнта:
 
-#### UC-01: Пошук та перегляд книги.
-
 ```mermaid
 sequenceDiagram
     title UC-01: Пошук та перегляд книги
@@ -75,8 +73,6 @@ sequenceDiagram
     Веб_UI-->>Клієнт: Показати сторінку книги
 
 ```
-
-#### UC-02: Оформлення замовлення (Checkout).
 
 ```mermaid
 sequenceDiagram
@@ -101,8 +97,6 @@ sequenceDiagram
     Веб_UI-->>Клієнт: Показати підтвердження замовлення
 ```
 
-#### UC-03: Перегляд особистого кабінету.
-
 ```mermaid
 sequenceDiagram
     title UC-03: Перегляд особистого кабінету
@@ -121,8 +115,6 @@ sequenceDiagram
 ```
 
 ### Сценарії Адміністратора:
-
-#### UC-04: Керування каталогом.
 
 ```mermaid
 sequenceDiagram
@@ -144,8 +136,6 @@ sequenceDiagram
     Адмін_UI->>API: Запит деактивації
     API-->>Адмін_UI: Підтвердити деактивацію
 ```
-
-#### UC-05: Обробка замовлень.
 
 ```mermaid
 sequenceDiagram
