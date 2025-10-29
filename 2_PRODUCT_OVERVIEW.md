@@ -54,6 +54,4 @@
 
 Для основних [Персон](https://github.com/iamvladshevchuk/singularitarians/blob/main/6_PERSONAS.md) вказуємо такі основні сценарії використання:
 
-[graph]: https://www.plantuml.com/plantuml/png/PPA_Ji9G5CRt-nGdJ32Gy0TsJ9-1pQKf5HfBcxINoPYKuk1WWeDXOD0uknI5Y9JMX2SuvuqyzqADsF7h_RxV-SwzxONI3EHax0hNlf8WVGYSuKZ2m0biIpg-9uHfIJ-02YunfGKzOKPn1SmG3DUnFVbx_8XhtDC2CpPDAQO84uenfqYRBmPZXraAQdf3r-R0AswL4JUunmGER_Y2AIRuTKWhS2C09g5jcI4xgtsZtcZMBZrsv7HFCzm1vnB0RznGn80FhZR7DU0ECzootEgXVQFHB85Q2lHCTweQJquvdd7fEU0d9lmXn_S_7wl6oBQk_Oci5SHMYTZMrVvNoMdAhDLfoPmFSjKlmPMw97R7D2kOxHApevXBnQGP5qgAZWnGgsDw9EA-G7HAYAvUbCT5kWSdIolIGn7lYbiXZYyAzRg-kNFPEfTj8VIJdcJdJ7L5p_O6_5Fz0000 "Сценарії використання"
-
-![Use Case Diagram][graph]
+![Use Case Diagram](https://github.com/iamvladshevchuk/singularitarians/blob/main/images/use-cases.png "Сценарії використання")
